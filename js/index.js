@@ -12,3 +12,14 @@ getId("user-btn").addEventListener("click",()=>{
     addHide("payment")
     showAndHide("user")
 })
+
+// admin btn
+addHide("order")
+getId("order-btn").addEventListener("click",()=>{
+    addHide("admin-product-create-and-show")
+    getId("order").classList.remove("hidden")
+})
+getId("product-btn").addEventListener("click",()=>{
+    addHide("order")
+    getId("admin-product-create-and-show").classList.remove("hidden")
+})

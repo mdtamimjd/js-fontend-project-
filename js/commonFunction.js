@@ -10,3 +10,8 @@ function addHide(id){
 function showAndHide(id){
     return getId(id).classList.toggle("hidden");
 }
+
+let countNumber = 0;
+function countNumberOne(){
+    return countNumber = (countNumber + 1);
+}

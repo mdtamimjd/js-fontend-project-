@@ -1,0 +1,13 @@
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid green;
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(rgb(207, 204, 0),rgb(0, 151, 0));
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
