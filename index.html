@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-800 text-white">
+<body class="bg-zinc-800 text-white relative z-0">
     <header class="bg-zinc-100 text-black">
         <nav class="w-11/12 h-20 md:w-8/12 mx-auto flex justify-between items-center">
             <button class="px-6 py-3 bg-green-500 font-medium text-lg rounded-lg" id="admin-btn">Admin</button>
@@ -47,21 +47,15 @@
         <!--admin order  list section -->
         <section class="col-span-5 lg:col-span-4 p-5 border-2 rounded-lg space-y-5" id="order">
             <h2 class="font-medium text-3xl text-zinc-200">Order panding list.</h2>
-            <div id="all-order-list">
+            <div id="all-order-list" class="space-y-3">
                 <!-- show order list -->
-                 <div class="p-2 border rounded-lg space-y-3">
-                    <h2 class="font-semibold text-2xl text-zinc-300">Title jfdsjfsjf</h2>
-                    <span class="flex justify-between items-center">
-                    <p class="font-medium text-lg text-zinc-500">price:</p>
-                    <p class="font-light text-lg text-zinc-400">date</p>
-                    </span>
-                 </div>
+
             </div>
         </section>
     </main>
 
     <!-- user page part -->
-    <main id="user" class="w-11/12 md:w-8/12 mx-auto my-20">
+    <main id="user" class="w-11/12 md:w-8/12 mx-auto my-10">
         <!-- all sell product show -->
         <section id="sell-product" class="space-y-0">
             <div id="sell-product-show" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -71,17 +65,50 @@
     </main>
 
     <!-- payment -->
-    <main id="payment">
-        <div></div>
-        <form action=""></form>
+    <main id="payment" class="w-11/12 md:w-8/12 fixed mx-auto flex justify-center items-center pt-5 z-50 rounded-lg top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%]">
+        <section class="w-[500px] ">
+        <div class="border-2 border-white rounded-lg p-5 space-y-2 shadow-2xl shadow-blue-400 bg-zinc-800">
+            <!-- dynamic product value show -->
+             <div class="font-semibold text-4xl text-end"><span id="closePayment-btn" class="p-2 select-none cursor-pointer text-zinc-300 hover:text-white">X</span></div>
+            <h3 class="font-semibold text-3xl text-white mb-5" id="show-title">fdsfsfsdffds</h3>
+             <div class="w-full md:h-[200px] rounded-lg hover:bg-zinc-700"><img class="w-full h-full rounded-lg" id="show-img" alt=""></div>
+             <p class="font-bold text-white text-lg" id="show-price">dfsfsdfdsfsdfd</p>
+
+             <!-- dynamic form show -->
+             <div class="w-full flex flex-col gap-3">
+                <input id="full-name" type="text" placeholder="Full name" class="font-medium text-lg p-3.5 rounded-lg text-zinc-800 border-2 border-green-400">
+                <input id="contact-number" type="text" placeholder="Contact number" class="font-medium text-lg p-3.5 rounded-lg text-zinc-800 border-2 border-green-400">
+                <select name="" id="select-payment-method" class="font-medium text-lg p-3.5 rounded-lg text-zinc-800 border-2 border-green-400">
+                    <option value="">Select payment method</option>
+                    <option value="bikash">Bikash</option>
+                    <option value="nogot">Nogot</option>
+                    <option value="roket">Roket</option>
+                    <option value="opay">Opay</option>
+                </select>
+                <input id="payment-account-btn" type="text" placeholder="Payment account number" class="font-medium text-lg p-3.5 rounded-lg text-zinc-800 border-2 border-green-400">
+                <input id="transition-btn" type="text" placeholder="Transition id" class="font-medium text-lg p-3.5 rounded-lg text-zinc-800 border-2 border-green-400">
+                <input id="payment-btn-order" type="submit" value="Order" class="py-3 font-bold text-white hover:text-zinc-200 rounded-lg bg-blue-600 hover:bg-blue-500 cursor-pointer">
+             </div>
+        </div>
+    </section>
     </main>
 
 
+    <!-- modal -->
+     <section id="modal-section" class="hidden h-screen top-0 w-full z-50 bg-zinc-700/30 fixed justify-center items-center">   
+        <div id="modal-box" class="bg-zinc-500 p-5 rounded-lg  w-[500px] space-y-5">
+            <h1 class="font-bold text-3xl text-center">Order Successful 👍</h1>
+            <div class="text-center">
+                <button id="modal-close" class="font-bold text-3xl text-zinc-700 hover:text-white py-2.5 px-6 bg-zinc-400 rounded-lg hover:bg-zinc-600">close</button>
+            </div>
+        </div>
 
+     </section>
 
     <!-- js file add -->
     <script src="./js/commonFunction.js"></script>
     <script src="./js/index.js"></script>
      <script src="./js/createProduct.js"></script>
+     <script src="./js/createPandingList.js"></script>
 </body>
 </html>

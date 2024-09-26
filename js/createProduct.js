@@ -44,7 +44,7 @@ getId("Create-product-btn").addEventListener("click", (event) => {
                     <p id="sell-product-price-${num}" class="font-medium text-lg text-zinc-200">Price: ${productPrice}TK</p>
                     <div class="flex justify-between items-center">
                         <button class="py-2 px-5 bg-orange-400 rounded-lg text-black font-medium text-lg" id="sell-product-addto-${num}">Add to card</button>
-                        <button class="py-2 px-5 bg-green-400 rounded-lg text-black font-medium text-lg" id="sell-product-buy-${num}">Buy now</button>
+                        <button onclick="productBtn('${img}','${productTitle}','${productPrice}')" class="py-2 px-5 bg-green-400 rounded-lg text-black font-medium text-lg">Buy now</button>
                     </div>
     `;
   let sellProductShow = getId("sell-product-show");
@@ -56,5 +56,6 @@ getId("Create-product-btn").addEventListener("click", (event) => {
   getId("product-title").value = "";
   getId("product-price").value = "";
 
-  // dainamic id num update
 });
+
+
